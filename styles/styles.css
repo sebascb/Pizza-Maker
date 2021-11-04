@@ -9,16 +9,21 @@ body {
   width: 800px;
 }
 
+canvas#pizza {
+  margin: 0 auto;
+  border: 1px solid springgreen;
+}
+
 .splash {
   display: flex;
   width: 980px;
   height: 579;
   justify-content: center;
   align-items: center;
-  background-image: url();
+  background-image: url('../images/fondo.jpeg');
 }
 
-button {
+.button {
   background-color:springgreen;
   color: white;
   font-size: 1rem;
@@ -26,6 +31,19 @@ button {
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;
 }
+
+#gameover {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 
 
 
