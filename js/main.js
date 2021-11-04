@@ -3,9 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const startButton = game.querySelector('#start');
     button.addEventListener('click', () => {
-        const game = document.getElementById('game');
-        game.classList.add('');
-        
+        let canvas = game.querySelector('#pizza-canvas');
+        const ctx = canvas.getContext('2d');
+        const pizzaMaker = new Game(
+            {
+            ctx: ctx,
+            }
+        );
+              
     })
 
 });
