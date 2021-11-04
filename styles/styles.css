@@ -4,7 +4,21 @@ body {
   font-family: sans-serif;
 }
 
-#start {
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.splash {
+  display: flex;
+  width: 980px;
+  height: 579;
+  justify-content: center;
+  align-items: center;
+  background-image: url();
+}
+
+button {
   background-color:springgreen;
   color: white;
   font-size: 1rem;
@@ -12,3 +26,6 @@ body {
   padding: 0.25rem 0.5rem;
   text-transform: uppercase;
 }
+
+
+
