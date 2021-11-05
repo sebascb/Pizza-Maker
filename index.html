@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body>
-    <div id="intro" class="container splash hidden"></div>
+    <div id="intro" class="container splash">
+        <h1>Pizza Maker</h1>
+        <button id="play">play</button>
+    </div>
+
     <div id="game" class="container hidden">
       <canvas id="pizza" width="800" height="500"></canvas>
       <button id="start">start</button>
-      <button id="play">play</button>
+      <button id="gameOver-button">go gameover</button>
+      <button id="win-button">go win</button>
     </div>
-    <div id="win">You Win</div>
-    <div id="gameover">Game Over</div>
+    <div id="win" class="hidden">You Win</div>
+    <div id="gameover" class="hidden">Game Over</div>
     <script src="/js/main.js"></script>
-    <script src="/js/game.js"></script>
+    <!-- <script src="/js/game.js"></script>
     <script src="/js/pizza.js"></script>
-    <script src="/js/cut.js"></script>
+    <script src="/js/cut.js"></script> -->
   </body>
 </html>

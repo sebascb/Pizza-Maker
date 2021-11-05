@@ -9,6 +9,7 @@ body {
   width: 800px;
 }
 
+
 canvas#pizza {
   margin: 0 auto;
   border: 1px solid springgreen;
@@ -17,32 +18,41 @@ canvas#pizza {
 .splash {
   display: flex;
   width: 980px;
-  height: 579;
+  height: 579px;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 8rem;
   background-image: url('../images/fondo.jpeg');
+  background-position-x: center;
+  
 }
 
-.button {
+h1 {
+  color: snow;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  -webkit-transform: scale(1.5);
+  
+
+}
+
+#play {
   background-color:springgreen;
   color: white;
-  font-size: 1rem;
+  border-color: springgreen;
+  font-size: 1.5rem;
   text-align: center;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 2rem;
   text-transform: uppercase;
-}
-
-#gameover {
-  display: block;
+  margin-bottom: 4rem;
+  border-radius: 4px;
 }
 
 .hidden {
   display: none;
 }
 
-.show {
-  display: block;
-}
 
 
 

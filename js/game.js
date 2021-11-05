@@ -1,8 +1,10 @@
 class Game {
   constructor(options, callback) {
     this.ctx = options.ctx;
-    this.cb = callback;
     this.chef = options.chef;
+    this.rows = options.rows;
+    this.columns = options.columns;
+    this.cb = callback;
   }
 
   _chef(life, score){
@@ -17,6 +19,9 @@ class Game {
           break;
         case 'ArrowRight':
           this.chef.goRight();
+          break;
+        case 'Space':
+          this.chef.shoot();
           break;
         default:
           break;
