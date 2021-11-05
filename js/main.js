@@ -8,5 +8,16 @@ window.addEventListener('load', () => {
         gameScreen.classList.remove('hidden')
     })
 
+    const startButton = document.querySelector('#start')
+    startButton.addEventListener('click', function(){
+        const gameScreen = document.querySelector('#game');
+        gameScreen.classList.add('hidden')
+        const winScreen = document.querySelector('#win-button');
+        winScreen.classList.remove('hidden')
+        const gameOverScreen = document.querySelector('#gameOver-button');
+        gameOverScreen.classList.remove('hidden')
+
+    })
+
   
 });
