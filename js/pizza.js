@@ -1,16 +1,15 @@
 class Pizza {
-    constructor(direction, life) {
-      this.direction = direction;
-      this.life = life;
+    constructor(positionX = 0, positionY = 0) {
+      this.position = {x: 10, y: 10};
+      this.positionX = positionX;
+      this.positionY = positionY;
+      this.direction = 0;
+    }
+
+    _drawPizza() {
+      this.ctx.fillStyle = 'brown';
+      this._ctx.fillRect(this.Pizza.positionX, this.Pizza.positionY, 10, 10);
     }
     
-  
-    _receiveDamage(damage){
-      this.life = this.life - damage
-    }
-  
-    _move() {
-      this.intervalId = setInterval(this._moveForward.bind(this), 100);
-    }
   
 }

@@ -18,32 +18,37 @@ class Game {
     this._drawChef();
     this._drawPizza();
   }
+
+  _assignControlToKeys() {
+
+    document.addEventListener('Keydown', (event) => {
+      switch (event.code) {
+        case 'ArrowUp':
+          this.Chef.goUp();
+          break;
+        case 'ArrowDown':
+          this.Chef.goDown();
+          break;
+        case 'ArrowRight':
+          this.Chef.goRight();
+          break;
+        case 'ArrowLeft':
+          this.Chef.goLeft();
+          break;
+      }
+    });
+  }
   
   start() {
     window.requestAnimationFrame(this._update.bind(this));
-    this.chef.moveleft
+    this._assignControlToKeys();
   }
-
 
 }
 
 
-class Render2D {
-  constructor(document, width, height, background) {
-      this._canvas = document.getElementById('#pizza');
-      this._canvas.width = width;
-      this._canvas.height = height;
-      this._canvas.style.background = background.url('');
-      this._ctx = this._canvas.getContext('2d');
-  }
 
-  /*_start() {
-    this._assignControlsToKeys();
-    this.chef.move();
-    window.requestAnimationFrame(this._update.bind(this));
-  }*/
-
-}  
+ 
 
 
 
