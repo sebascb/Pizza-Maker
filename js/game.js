@@ -1,61 +1,53 @@
 class Game {
-  constructor(options, callback) {
+  constructor(options) {
     this.ctx = options.ctx;
     this.chef = options.chef;
-    this.rows = options.rows;
-    this.columns = options.columns;
-    this.cb = callback;
+    this.pizza = options.pizza;
+    this.score = 0;
+    this.livesElement = undefined;
+    this.scoreElement = undefined;
   }
 
-  _chef(life, score){
-
-  }
-
-  _assignControlsToKeys() {
-    document.addEventListener('keydown', (event) => {
-      switch (event.code) {
-        case 'ArrowLeft':
-          this.chef.goLeft();
-          break;
-        case 'ArrowRight':
-          this.chef.goRight();
-          break;
-        case 'Space':
-          this.chef.shoot();
-          break;
-        default:
-          break;
-      }
-    });
-  }
-
-  _start() {
+  _clean(){
+    this.ctx.fillStyle = 'white';
+    this.ctx.fillRect(0, 0, 800, 600);
   }
 
   _update() {
-  }
-
-}
-      
-class Pizza {
-  constructor(direction) {
-    this.direction = direction;
+    this._clean();
+    this._drawChef();
+    this._drawPizza();
   }
   
-  _goRight() {
+  start() {
+    window.requestAnimationFrame(this._update.bind(this));
+    this.chef.moveleft
   }
 
-  _goLeft(){
-  }
 
 }
+
+
+class Render2D {
+  constructor(document, width, height, background) {
+      this._canvas = document.getElementById('#pizza');
+      this._canvas.width = width;
+      this._canvas.height = height;
+      this._canvas.style.background = background.url('');
+      this._ctx = this._canvas.getContext('2d');
+  }
+
+  /*_start() {
+    this._assignControlsToKeys();
+    this.chef.move();
+    window.requestAnimationFrame(this._update.bind(this));
+  }*/
+
+}  
+
+
+
+
+      
+
     
-class Cut {
-  constructor(direction) {
-    this.direction = direction;
-  }
-
-  _goStraight() {   
-  }
-
-}
