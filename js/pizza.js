@@ -8,7 +8,7 @@ class Pizza {
 
     _drawPizza() {
       this.ctx.fillStyle = 'brown';
-      this._ctx.fillRect(this.Pizza.positionX, this.Pizza.positionY, 10, 10);
+      this._ctx.fillRect(this.pizza.positionX, this.pizza.positionY, 20, 20);
     }
     
   

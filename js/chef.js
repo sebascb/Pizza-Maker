@@ -38,6 +38,7 @@ class Chef {
 
   _drawChef() {
     this.ctx.fillStyle = 'blue';
-    this._ctx.fillRect(this.Chef.positionX, this.Chef.positionY, 10, 10);
+    this._ctx.fillRect(this.chef.positionX, this.chef.positionY, 10, 10);
+    console.log('hola');
   }
 }

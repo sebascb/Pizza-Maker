@@ -16,7 +16,9 @@ class Game {
   _update() {
     this._clean();
     this._drawChef();
-    this._drawPizza();
+    window.requestAnimationFrame(this._update.bind(this));
+    
+    /*this._drawPizza();*/
   }
 
   _assignControlToKeys() {
