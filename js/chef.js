@@ -1,44 +1,28 @@
 class Chef {
-  constructor(positionX = 0, positionY = 0) {
-    this.position = {x: 10, y: 10};
-    this.positionX = positionX;
-    this.positionY = positionY;
-    this.direction = 0;
+  constructor(positionX = 400, positionY = 550) {
+    this.position = {x: positionX, y: positionY};
   }
 
-  goUp(){
-    {
-      this.positionY--;
-    }
-  }
 
-  goDown(){
-    {
-      this.positionY++;
-    }
-  }
+  
 
   goLeft(){
-    {
-      this.positionX--;
-    }
+    
+    this.position.x = this.position.x - 1;
+    
   }
 
   goRight(){
-    {
-      this.positionX++;
-    }
+    
+    this.position.x = this.position.x + 1;
+    
   }
 
 
-  _receiveDamage(damage) {
+ /*_receiveDamage(damage) {
     this.life = this.life - damage
-  }
+  }*/
 
 
-  _drawChef() {
-    this.ctx.fillStyle = 'blue';
-    this._ctx.fillRect(this.chef.positionX, this.chef.positionY, 10, 10);
-    console.log('hola');
-  }
+  
 }

@@ -1,12 +1,29 @@
 window.addEventListener('load', () => {
-    console.log('load');
+
+    function startGame() {
+        const canvas = document.querySelector('#pizza');
+        const ctx = canvas.getContext('2d');
+        const game = new Game({
+            ctx: ctx,
+            chef: new Chef(),
+            pizza: new Pizza(),
+        })
+
+        game.start()
+    }
+
+    
     const playButton = document.querySelector('#play')
     playButton.addEventListener('click', function(){
         const introScreen = document.querySelector('#intro');
         introScreen.classList.add('hidden')
         const gameScreen = document.querySelector('#game');
         gameScreen.classList.remove('hidden')
-
+        
+        const startButton = document.querySelector('#start')
+        startButton.addEventListener('click', () => {
+            startGame()
+        })
 
     })
 
@@ -26,8 +43,5 @@ window.addEventListener('load', () => {
         const gameoverScreen = document.querySelector('#gameover');
         gameoverScreen.classList.remove('hidden')
     })
-
-
-
   
 });

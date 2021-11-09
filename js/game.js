@@ -13,37 +13,40 @@ class Game {
     this.ctx.fillRect(0, 0, 800, 600);
   }
 
+  _drawChef() {
+    this.ctx.fillStyle = 'blue';
+    this.ctx.fillRect(this.chef.position.x, this.chef.position.y, 50, 50);
+  }
+
+  _drawPizza() {
+    this.ctx.fillStyle = 'brown';
+    this.ctx.fillRect(this.pizza.position.x, this.pizza.position.y, 50, 50);
+  }
+
   _update() {
+    console.log('render');
     this._clean();
-    this._drawChef();
+    this._drawChef(); 
+    this._drawPizza();
     window.requestAnimationFrame(this._update.bind(this));
-    
-    /*this._drawPizza();*/
   }
 
   _assignControlToKeys() {
-
-    document.addEventListener('Keydown', (event) => {
+    document.addEventListener('keydown', (event) => {
       switch (event.code) {
-        case 'ArrowUp':
-          this.Chef.goUp();
-          break;
-        case 'ArrowDown':
-          this.Chef.goDown();
-          break;
         case 'ArrowRight':
-          this.Chef.goRight();
+          this.chef.goRight();
           break;
         case 'ArrowLeft':
-          this.Chef.goLeft();
+          this.chef.goLeft();
           break;
       }
     });
   }
   
   start() {
-    window.requestAnimationFrame(this._update.bind(this));
     this._assignControlToKeys();
+    window.requestAnimationFrame(this._update.bind(this));
   }
 
 }
