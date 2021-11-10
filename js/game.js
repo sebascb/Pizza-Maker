@@ -21,6 +21,7 @@ class Game {
   _drawPizza() {
     this.ctx.fillStyle = 'brown';
     this.ctx.fillRect(this.pizza.position.x, this.pizza.position.y, 50, 50);
+    
   }
 
   _update() {
@@ -43,6 +44,7 @@ class Game {
       }
     });
   }
+
   
   start() {
     this._assignControlToKeys();

@@ -3,19 +3,16 @@ class Chef {
     this.position = {x: positionX, y: positionY};
   }
 
-
-  
-
   goLeft(){
-    
-    this.position.x = this.position.x - 1;
+
+    this.position.x = this.position.x - 1; 
     
   }
 
   goRight(){
-    
-    this.position.x = this.position.x + 1;
-    
+
+    this.position.x = this.position.x + 1; 
+
   }
 
 
