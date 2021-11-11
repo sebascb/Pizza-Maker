@@ -3,6 +3,7 @@ class Game {
     this.ctx = options.ctx;
     this.chef = options.chef;
     this.pizza = options.pizza;
+    this.shoot = options.shoot;
     this.score = 0;
     this.livesElement = undefined;
     this.scoreElement = undefined;
@@ -19,9 +20,14 @@ class Game {
   }
 
   _drawPizza() {
-    this.ctx.fillStyle = 'brown';
+    this.ctx.fillStyle = 'orange';
     this.ctx.fillRect(this.pizza.position.x, this.pizza.position.y, 50, 50);
     
+  }
+
+  _drawShoot() {
+    this.ctx.fillStyle = 'green';
+    this.ctx.fillRect(this.shoot.position.x, this.shoot.position.y, 10, 10);
   }
 
   _update() {
@@ -29,6 +35,7 @@ class Game {
     this._clean();
     this._drawChef(); 
     this._drawPizza();
+    this._drawShoot();
     window.requestAnimationFrame(this._update.bind(this));
   }
 

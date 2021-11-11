@@ -6,9 +6,9 @@ class Pizza {
     
     }
 
-    goLeft(){
+    /*goLeft(){
       this.position.x = this.position.x - this.speed;
-    }
+    }*/
   
     goRight(){   
       this.position.x = this.position.x + this.speed;

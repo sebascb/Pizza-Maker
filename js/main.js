@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
             ctx: ctx,
             chef: new Chef(),
             pizza: new Pizza(),
+            shoot: new Shoot(),
         })
 
         game.start()

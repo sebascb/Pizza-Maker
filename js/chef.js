@@ -1,5 +1,5 @@
 class Chef {
-  constructor(positionX = 400, positionY = 550) {
+  constructor(positionX = 375, positionY = 550) {
     this.position = {x: positionX, y: positionY};
   }
 
@@ -14,6 +14,7 @@ class Chef {
     this.position.x = this.position.x + 1; 
 
   }
+
 
 
  /*_receiveDamage(damage) {
