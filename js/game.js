@@ -44,9 +44,14 @@ class Game {
       switch (event.code) {
         case 'ArrowRight':
           this.chef.goRight();
+          this.shoot.goRight();
           break;
         case 'ArrowLeft':
           this.chef.goLeft();
+          this.shoot.goLeft();
+          break;
+        case 'ArrowUp':
+          this.shoot.attack();
           break;
       }
     });
