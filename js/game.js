@@ -30,12 +30,29 @@ class Game {
     this.ctx.fillRect(this.shoot.position.x, this.shoot.position.y, 10, 10);
   }
 
+  hay_Colision() {
+    
+      if (this.shoot.position.x < this.pizza.position.x + this.pizza.position.w &&
+          this.shoot.position.x + this.shoot.position.w > this.pizza.position.x &&
+          this.shoot.position.y < this.pizza.position.y + this.pizza.position.h &&
+          this.shoot.position.h + this.shoot.position.y > this.pizza.position.y) {
+          return true;
+          } else {
+            return false;
+          }
+
+        
+  }
+
   _update() {
     console.log('render');
     this._clean();
     this._drawChef(); 
     this._drawPizza();
     this._drawShoot();
+    if (this.hay_Colision()) {
+      this.score = this.score + 1;
+    }
     window.requestAnimationFrame(this._update.bind(this));
   }
 
@@ -43,15 +60,14 @@ class Game {
     document.addEventListener('keydown', (event) => {
       switch (event.code) {
         case 'ArrowRight':
-          this.chef.goRight();
-          this.shoot.goRight();
+          this.chef.goRight();     
           break;
         case 'ArrowLeft':
-          this.chef.goLeft();
-          this.shoot.goLeft();
+          this.chef.goLeft();        
           break;
         case 'ArrowUp':
-          this.shoot.attack();
+          this.shoot.setPositionX(this.chef.position.x)
+          this.shoot.goAttack();
           break;
       }
     });

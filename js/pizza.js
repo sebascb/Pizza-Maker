@@ -1,5 +1,5 @@
 class Pizza {
-    constructor(positionX = 0, positionY = 40, speed = 80) {
+    constructor(positionX = 0, positionY = 40, speed = 10) {
       this.position = {x: positionX, y: positionY};
       this.speed = speed;
       this.goRightMove();
@@ -20,7 +20,7 @@ class Pizza {
        if (this.position.x === 800){
          this.position.x = 0;
        }     
-      }, 1000);  
+      }, 100);  
     }
     
 }

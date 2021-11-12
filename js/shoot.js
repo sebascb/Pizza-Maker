@@ -1,31 +1,24 @@
 class Shoot {
-    constructor(positionX = 395, positionY = 550, speed = 80) {
+    constructor(positionX = 395, positionY = 550, speed = 10) {
       this.position = {x: positionX, y: positionY};
       this.speed = speed;
-    }
-    
-    goLeft() {
-
-      this.position.x = this.position.x - 1; 
-        
-    }
-    
-    goRight() {
-    
-      this.position.x = this.position.x + 1; 
-    
     }  
 
-    attack() {
+    move() {
       this.position.y = this.position.y - this.speed;
     }
 
+    setPositionX(posx) {
+        this.position.x = posx;
+    }
+
     goAttack(){
-        setInterval(() => {      
-            this.attack();
-            if (this.position.y === 0){
-              this.position.y = 550;
-            }     
+        const id = setInterval(() => {      
+            if (this.position.y <= 0) {   
+                this.position.y = 610;
+                clearInterval(id)
+            }
+            this.move();   
         }, 100);  
     }
 
