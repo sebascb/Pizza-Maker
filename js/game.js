@@ -35,13 +35,12 @@ class Game {
       if (this.shoot.position.x < this.pizza.position.x + this.pizza.position.w &&
           this.shoot.position.x + this.shoot.position.w > this.pizza.position.x &&
           this.shoot.position.y < this.pizza.position.y + this.pizza.position.h &&
-          this.shoot.position.h + this.shoot.position.y > this.pizza.position.y) {
+          this.shoot.position.h + this.shoot.position.y > this.pizza.position.y
+      ) {
           return true;
       } else {
           return false;
-      }
-
-        
+      }      
   }
 
   _update() {
@@ -50,10 +49,10 @@ class Game {
     this._drawChef(); 
     this._drawPizza();
     this._drawShoot();
-    if (this.hay_Colision()) {
-      this.shoot.position.y.stop();
-      this.score = this.score + 1;
+    if (this.hay_Colision() === true) {
+      gameoverScreen();  
     }
+
     window.requestAnimationFrame(this._update.bind(this));
   }
 
