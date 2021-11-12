@@ -23,6 +23,9 @@ body {
 canvas#pizza {
   margin: 0 auto;
   border: 1px solid springgreen;
+  background-image: url('../images/chef fondo.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 .splash {
@@ -77,6 +80,8 @@ h1 {
   align-items: center;
   position: absolute;
 }
+
+
 
 
 

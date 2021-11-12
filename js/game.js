@@ -37,9 +37,9 @@ class Game {
           this.shoot.position.y < this.pizza.position.y + this.pizza.position.h &&
           this.shoot.position.h + this.shoot.position.y > this.pizza.position.y) {
           return true;
-          } else {
-            return false;
-          }
+      } else {
+          return false;
+      }
 
         
   }
@@ -51,6 +51,7 @@ class Game {
     this._drawPizza();
     this._drawShoot();
     if (this.hay_Colision()) {
+      this.shoot.position.y.stop();
       this.score = this.score + 1;
     }
     window.requestAnimationFrame(this._update.bind(this));
