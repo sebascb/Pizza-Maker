@@ -35,13 +35,13 @@ class Game {
       if (this.shoot.position.x < this.pizza.position.x + this.pizza.position.w &&
           this.shoot.position.x + this.shoot.position.w > this.pizza.position.x &&
           this.shoot.position.y < this.pizza.position.y + this.pizza.position.h &&
-          this.shoot.position.h + this.shoot.position.y > this.pizza.position.y
-      ) {
-          return true;
+          this.shoot.position.h + this.shoot.position.y > this.pizza.position.y) {
+
+          return true;    
       } else {
-          return false;
-      }      
-  }
+        return false;
+      } 
+  };
 
   _update() {
     console.log('render');
